@@ -1,0 +1,25 @@
+<!-- Menus/templates/Menus/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form method=POST action="">
+            {% csrf_token %}
+            {{ login_form }}
+    
+            <button type="submit">Login</button>
+        </form>
+        <div class="or-create-account">
+            <p>or</p>
+            <a href="{% url 'Menus:register' %}" class="create-account-button">Create Account</a>
+        </div>
+    </div>
+</body>
+</html>

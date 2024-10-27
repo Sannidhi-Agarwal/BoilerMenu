@@ -1,0 +1,76 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("/static/bg-img.jpg") no-repeat center center fixed; /* Background image */
+    background-size: cover;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 20px auto; /* Center the dashboard */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    color: gold; /* Gold color for heading */
+    margin-bottom: 20px;
+}
+
+.user-preferences-label {
+    font-size: 1.5em; /* Larger font for labels */
+    margin: 20px 0 10px;
+    text-align: center;
+    color: gold; /* Gold color for labels */
+}
+
+.user-preferences, .user-allergies {
+    display: flex;
+    justify-content: center; /* Center align the preference cards */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 15px; /* Space between cards */
+}
+
+.user-preference-card {
+    background-color: gold; /* Gold color for cards */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center; /* Center text */
+    width: 120px; /* Fixed width for preference cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.user-preference-card img {
+    width: 50px; /* Set a fixed size for images */
+    height: 50px;
+    margin-bottom: 5px; /* Space below image */
+    border-radius: 5px;
+}
+
+.user-preference-card p {
+    margin: 0;
+    font-size: 1em; /* Font size for preferences */
+    color: black;
+}
+
+/* Change Preferences link */
+.change-preferences a {
+    display: block; /* Change to block to take full width */
+    text-align: center; /* Center the text inside the link */
+    margin: 20px auto; /* Center the link */
+    padding: 10px 20px;
+    background-color: gold; /* Gold background for button */
+    color: black; /* Black text for button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    width: 200px; /* Fixed width for consistent sizing */
+}
+
+.change-preferences a:hover {
+    background-color: #ffcc00; /* Lighter gold on hover */
+}

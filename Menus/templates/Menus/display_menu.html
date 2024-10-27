@@ -1,0 +1,102 @@
+<!-- Menus/templates/Menus/display_books.html -->
+
+{% extends 'index.html'%}
+{% load static %}
+
+{% block title %}Menu{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/display_menu.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<div class="menu-container">
+    {% for item in items %}
+        <div class="menu-item-card">
+                <p>{{ item.name }}</p>
+                <div class="item-preferences">
+                    <p class="tags-header">Dietary Tags</p>
+                    <div class="dietary-tags">
+                        <div class="item-preference-card">
+                            {% if item.vegetarian %}
+                            <img src="{% static 'vegetarian.png' %}">   
+                            <p>Vegetarian</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.vegan %}
+                            <img src="{% static 'vegan.png' %}">   
+                            <p>Vegan</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.glutenFree %}
+                            <img src="{% static 'glutenFree.png' %}">   
+                            <p>Gluten Free</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="item-preferences">
+                    <p class="tags-header">Allergens</p>
+                    <div class="allergen-tags">
+                        <div class="item-preference-card">
+                            {% if item.dairy %}
+                            <img src="{% static 'dairy.png' %}">   
+                            <p>Dairy</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.peanuts %}
+                            <img src="{% static 'peanuts.png' %}">   
+                            <p>Peanuts</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.soybean %}
+                            <img src="{% static 'soybean.png' %}">   
+                            <p>Soybean</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.wheat %}
+                            <img src="{% static 'wheat.png' %}">   
+                            <p>Wheat</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.eggs %}
+                            <img src="{% static 'eggs.png' %}">   
+                            <p>Eggs</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.coconut %}
+                            <img src="{% static 'coconut.png' %}">   
+                            <p>Coconut</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.fish %}
+                            <img src="{% static 'fish.png' %}">   
+                            <p>Fish</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.shellfish %}
+                            <img src="{% static 'shellfish.png' %}">   
+                            <p>Shellfish</p>
+                            {% endif %}
+                        </div>
+                        <div class="item-preference-card">
+                            {% if item.sesame %}
+                            <img src="{% static 'sesame.png' %}">   
+                            <p>Sesame</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

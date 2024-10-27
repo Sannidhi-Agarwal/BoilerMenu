@@ -1,0 +1,20 @@
+<!-- Menus/templates/Menus/user_set_preferences.html -->
+
+{% extends 'index.html'%}
+{% load static %}
+
+{% block title %}Set Preferences{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/user_set_preferences.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<form method=POST action="">
+    {% csrf_token %}
+    
+    <p>Include Dietary Restrictions and Exclude Allergens</p>
+    {{ preferences_form }}
+
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

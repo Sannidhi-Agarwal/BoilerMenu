@@ -1,0 +1,120 @@
+<!-- Menus/templates/menus/menu_item_details.html -->
+{% extends 'index.html'%}
+{% load static %}
+
+{% block title %}Reviews{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/menu_item_details.css' %}"/>
+{% endblock %}
+
+
+{% block content %}
+<div class="item-details-wrapper">
+    <div class="item-details">
+        <h3>{{ item.name }}</h3>
+        <div class="item-nutrition-facts">
+            <p>Nutrition Facts</p>
+            <p>Serving size: {{ item.servingSize }}</p>
+            <p>Calories: {{ item.calories }}</p>
+            <p>Total Fat: {{ item.totalFat }}</p>
+            <p>Saturated Fat: {{ item.saturatedFat }}</p>
+            <p>Cholestrol: {{ item.cholestrol }}</p>
+            <p>Sodium: {{ item.sodium }}</p>
+            <p>Total Carbohydrate: {{ item.totalCarbohydrate }}</p>
+            <p>Sugar: {{ item.sugar }}</p>
+            <p>Added Sugar: {{ item.addedSugar }}</p>
+            <p>Dietary Fiber: {{ item.dietaryFiber }}</p>
+            <p>Protein: {{ item.protein }}</p>
+        </div>
+        <div class="item-preferences">
+            <p>Dietary Tags</p>
+            <div class="item-preference-card">
+                {% if item.vegetarian %}
+                <img src="{% static 'vegetarian.png' %}">   
+                <p>Vegetarian</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.vegan %}
+                <img src="{% static 'vegan.png' %}">   
+                <p>Vegan</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.glutenFree %}
+                <img src="{% static 'glutenFree.png' %}">   
+                <p>Gluten Free</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="item-allergies">
+            <p>Allergens</p>
+            <div class="item-preference-card">
+                {% if item.dairy %}
+                <img src="{% static 'dairy.png' %}">   
+                <p>Dairy</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.peanuts %}
+                <img src="{% static 'peanuts.png' %}">   
+                <p>Peanuts</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.soybean %}
+                <img src="{% static 'soybean.png' %}">   
+                <p>Soybean</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.wheat %}
+                <img src="{% static 'wheat.png' %}">   
+                <p>Wheat</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.eggs %}
+                <img src="{% static 'eggs.png' %}">   
+                <p>Eggs</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.coconut %}
+                <img src="{% static 'coconut.png' %}">   
+                <p>Coconut</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.fish %}
+                <img src="{% static 'fish.png' %}">   
+                <p>Fish</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.shellfish %}
+                <img src="{% static 'shellfish.png' %}">   
+                <p>Shellfish</p>
+                {% endif %}
+            </div>
+            <div class="item-preference-card">
+                {% if item.sesame %}
+                <img src="{% static 'sesame.png' %}">   
+                <p>Sesame</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="item-ingredients">
+            <p>{{ item.ingredients }}</p>
+        </div>
+        <div class="item-locations">
+            <p>Upcoming Meals</p>
+            {% for location in item.locations %}
+                <div class="item-location">
+                    <p>location</p>
+                </div>
+            {% endFor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

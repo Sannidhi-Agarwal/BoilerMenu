@@ -1,0 +1,91 @@
+/* General styles for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("/static/bg-img.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* Container for the menu items */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    max-width: 1200px;
+    margin: 20px auto; /* Center the container */
+}
+
+/* Individual menu item card */
+.menu-item-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 23%; /* Two cards in a row */
+    box-sizing: border-box;
+    text-align: center; /* Center align text */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .menu-item-card {
+        width: calc(100% - 20px); /* Full width on smaller screens */
+    }
+}
+
+/* Style for the item name in the menu item card */
+.menu-item-card p {
+    font-weight: bold; /* Make the item name bold */
+    font-size: 1.5em; /* Increase the font size */
+    margin-bottom: 15px; /* Space below the item name */
+    color: #333; /* Darker color for better contrast */
+}
+
+/* Header styles for dietary tags and allergens */
+.tags-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Space below the header */
+}
+
+/* Preferences section styling */
+.item-preferences {
+    margin-top: 10px; /* Space above the preferences section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align dietary and allergen tags */
+}
+
+/* Flex container for dietary tags and allergens */
+.dietary-tags, .allergen-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items within each container */
+    gap: 15px; /* Space between items */
+}
+
+/* Individual preference card for tags */
+.item-preference-card {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center;
+    text-align: center;
+}
+
+/* Image size in preference cards */
+.item-preference-card img {
+    width: 50px; /* Set width for the images */
+    height: 50px; /* Set height for the images */
+    margin-bottom: 5px; /* Space between image and text */
+}
+
+/* Text styles for preference tags */
+.item-preference-card p {
+    margin: 0; /* Remove default margin */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Adjust font size if needed */
+    text-align: center; /* Center the text */
+}

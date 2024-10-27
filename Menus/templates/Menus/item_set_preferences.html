@@ -1,0 +1,22 @@
+<!-- Menus/templates/Menus/item_set_preferences.html -->
+
+{% extends 'index.html'%}
+{% load static %}
+
+{% block title %}Search{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/item_set_preferences.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<form method=POST action="">
+    {% csrf_token %}
+    <p>Include Dietary Restrictions and Exclude Allergens</p>
+    {{ preferences_form }}
+    <button type="submit">Search</button>
+</form>
+<div class="or-use-user-preferences">
+    <a href="{% url 'Menus:display_menu' %}">Reset Preferences</a>
+</div>
+{% endblock %}

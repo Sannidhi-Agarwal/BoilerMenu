@@ -1,0 +1,116 @@
+<!-- Menus/templates/Menus/dashboard.html -->
+{% extends 'index.html'%}
+{% load static %}
+
+{% block title %}My Dashboard{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"/>
+    <script>
+            function addOrRemove(choice, bool) {
+                if (choice === 1) {
+                    user.vegetarian = !bool;
+                } else if (choice === 2) {
+                    user.vegan = !bool;
+                } else if (choice === 3) {
+                    user.glutenFree = !bool;
+                }
+            }
+            function giveValue(bool) {
+                if (bool) {
+                    return 'Remove';
+                } else {
+                    return 'Add';
+                }
+            }
+        </script>
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Hi, {{ user.username }}</h2>
+    
+    <p class="user-preferences-label">Dietary Restrictions</p>
+    <div class="user-preferences">
+        {% if user.vegetarian %}
+        <div class="user-preference-card">
+                <img src="{% static 'vegetarian.png' %}">   
+                <p>Vegetarian</p>
+        </div>
+        {% endif %}
+        {% if user.vegan %}
+        <div class="user-preference-card">
+                <img src="{% static 'vegan.png' %}">   
+                <p>Vegan</p>
+        </div>
+        {% endif %}
+        {% if user.glutenFree %}
+        <div class="user-preference-card">
+                <img src="{% static 'glutenFree.png' %}">   
+                <p>Gluten Free</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <p class="user-preferences-label">Allergies</p>
+    <div class="user-allergies">
+        {% if user.dairy %}
+        <div class="user-preference-card">
+            <img src="{% static 'dairy.png' %}">   
+            <p>Dairy</p>
+        </div>
+        {% endif %}
+        {% if user.peanuts %}
+        <div class="user-preference-card">
+            <img src="{% static 'peanuts.png' %}">   
+            <p>Peanuts</p>
+        </div>
+        {% endif %}
+        {% if user.soybean %}
+        <div class="user-preference-card">
+            <img src="{% static 'soybean.png' %}">   
+            <p>Soybean</p>
+        </div>
+        {% endif %}
+        {% if user.wheat %}
+        <div class="user-preference-card">
+            <img src="{% static 'wheat.png' %}">   
+            <p>Wheat</p>
+        </div>
+        {% endif %}
+        {% if user.eggs %}
+        <div class="user-preference-card">
+            <img src="{% static 'eggs.png' %}">   
+            <p>Eggs</p>
+        </div>
+        {% endif %}
+        {% if user.coconut %}
+        <div class="user-preference-card">
+            <img src="{% static 'coconut.png' %}">   
+            <p>Coconut</p>
+        </div>
+        {% endif %}
+        {% if user.fish %}
+        <div class="user-preference-card">
+            <img src="{% static 'fish.png' %}">   
+            <p>Fish</p>
+        </div>
+        {% endif %}
+        {% if user.shellfish %}
+        <div class="user-preference-card">
+            <img src="{% static 'shellfish.png' %}">   
+            <p>Shellfish</p>
+        </div>
+        {% endif %}
+        {% if user.sesame %}
+        <div class="user-preference-card">
+            <img src="{% static 'sesame.png' %}">   
+            <p>Sesame</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="change-preferences">
+        <a href="{% url 'Menus:user_set_preferences' %}">Change Preferences</a>
+    </div>
+</div>
+{% endblock %}

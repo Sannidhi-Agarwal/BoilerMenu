@@ -1,0 +1,25 @@
+<!-- Menus/templates/Menus/register.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}"/>
+    <title>Create Account</title>
+</head>
+<body>
+    <div class="container">
+
+        <form method=POST action="">
+            {% csrf_token %}
+            
+            {{ register_form }}
+    
+    
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+</body>
+</html>

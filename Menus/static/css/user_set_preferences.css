@@ -1,0 +1,84 @@
+/* CSS Stylesheet: user_set_preferences.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("/static/bg-img.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px; /* Adjust based on preference */
+    margin: 30px auto; /* Center the form with margin */
+    color: gold; /* Gold text color */
+}
+
+form p {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center; /* Align checkbox and label */
+    margin: 10px 0;
+}
+
+h1 {
+    color: gold; /* Gold color for headers */
+    text-align: center; /* Center header text */
+}
+
+label {
+    display: flex;
+    align-items: center; /* Align checkbox and label */
+    margin: 10px 0; /* Space between checkboxes */
+    font-size: 1.2em; /* Increase label font size */
+}
+
+input[type="checkbox"] {
+    accent-color: gold; /* Use gold for the checkbox color */
+    transform: scale(1.2); /* Make the checkbox larger */
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+button[type="submit"] {
+    background-color: gold; /* Gold background */
+    color: black; /* Black text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    display: block; /* Ensure the button occupies full width */
+    text-align: center; /* Center text inside button */
+    margin: 20px auto; /* Center the button */
+    font-size: 1.1em; /* Font size for buttons */
+}
+
+.or-use-user-preferences {
+    text-align: center; /* Center the "or" text */
+    color: white; /* White color for the text */
+    margin: 20px 0; /* Space above and below the section */
+}
+
+.or-use-user-preferences p {
+    margin: 0; /* Remove default margin for paragraph */
+}
+
+.or-use-user-preferences a {
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Display as block for padding */
+    margin-top: 10px; /* Space above the link */
+}
+
+.or-use-user-preferences button {
+    background-color: gold; /* Gold color for the reset button */
+    color: black; /* Black text for visibility */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 30px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor for buttons */
+    margin-top: 10px; /* Space above the button */
+    width: auto; /* Allow width to auto for the button */
+    font-size: 1.1em; /* Font size for buttons */
+}
